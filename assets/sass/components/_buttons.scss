@@ -17,21 +17,62 @@
 // Mixins
 // ==================================================================================================
 @mixin button-variant(
-  $variable-1: xx,
-  $variable-2: xx,
-  $variable-3: xx
+  //body
+  $button-width:210px,
+  $button-height: 40px,
+  $button-border-color: transparent,
+  $button-border-radius: 5px,
+  $button-text-color:white,
+  $button-text-size: 18px,
+  $button-display:inline-block,
+  $button-margin:10px,
+
+  //success state
+  $success-bg: #58DF58,
+  $success-hover-opacity: 0.8,
+  $success-focus:#44AF44,
+
+  //fail state
+  $fail-bg: #54548F,
+  $fail-hover-opacity: 0.8,
+  $fail-focus:#333374
 ) {
   // MIXINS
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // STYLES OF COMPONENT ITSELF
   // >>>>>>>>>>>>>>>>>>>>>>>
+  width: $button-width;
+  height: $button-height;
+  border-color: $button-border-color;
+  border-radius: $button-border-radius;
+  color:$button-text-color;
+  font-size: $button-text-size;
+  margin:$button-margin;
 
   // STYLES OF CHILD CLASS
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // STYLES OF STATE
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-success{
+    background: $success-bg;
+    &:hover{
+        opacity: $success-hover-opacity;
+    }
+    &:focus{
+        background:$success-focus;
+    }
+  }
+  &.is-fail{
+    background: $fail-bg;
+    &:hover{
+        opacity: $fail-hover-opacity;
+    }
+    &:focus{
+        background:$fail-focus;
+    }
+  }
 
   // STYLES OF MODIFIER CLASS
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -60,7 +101,7 @@
 
   // MIXINS
   // >>>>>>>>>>>>>>>>>>>>>>>
-
+  @include button-variant;
   // STYLES OF COMPONENT ITSELF
   // >>>>>>>>>>>>>>>>>>>>>>>
 
