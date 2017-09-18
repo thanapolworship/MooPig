@@ -59,7 +59,7 @@
     &:hover{
         opacity: $success-hover-opacity;
     }
-    &:focus{
+    &:active{
         background:$success-focus;
     }
   }
@@ -68,7 +68,7 @@
     &:hover{
         opacity: $fail-hover-opacity;
     }
-    &:focus{
+    &:active{
         background:$fail-focus;
     }
   }
