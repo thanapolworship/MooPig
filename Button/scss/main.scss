@@ -1,0 +1,20 @@
+@charset 'utf-8';
+@import 'mixin.scss';
+@import 'variable.scss';
+
+.container-flex{
+    @include container-flex();
+    justify-content: center;
+    flex-flow: row wrap;
+    .col1,.col3,.col5{
+        @include col-button();
+        text-align: right;
+    }
+    .col2,.col4,.col6{
+        @include col-button();
+    }
+}
+
+.button-primary{
+    @include button-primary();
+}
