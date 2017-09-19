@@ -45,23 +45,42 @@
                 display: none;
                 .icon-upload{
                     position: absolute;
-                    left: 5px;
-                    top:5px;
+                    left: 10px;
+                    top:10px;
+                    background:white;
+                    color:grey;
+                    padding: 8px 13px 8px 13px;
+                    border-radius: 5px;
                 }
                 .icon-save{
                     position: absolute;
-                    top: 5px;
-                    right: 25px;
+                    top: 10px;
+                    right: 10px;
+                    background:red;
+                    border-radius: 5px;
+                    padding: 8px 15px 8px 15px;
+                    .position{
+                        padding-right: 10px;
+                    }
                 }
                 .text-ref{
                     position: absolute;
-                    bottom: 5px;
-                    left: 5px;
+                    bottom: 20px;
+                    left: 15px;
+                    font-weight: bold;
                 }
                 .icon-etc{
                     position: absolute;
-                    bottom: 5px;
-                    right:5px;
+                    bottom: 8px;
+                    right:8px;
+                    background: rgba(0, 0, 0, 0.9);
+                    padding: 10px 20px 10px 20px;
+                    border-radius: 30px;
+                    font-weight: bold;
+                    .position{
+                       margin-right: 5px;
+                       font-weight: bolder;
+                    }
                 }
             }
         }
