@@ -43,52 +43,8 @@
                 width:100%;
                 height:$img-height;
                 display: none;
-                .icon-upload{
-                    position: absolute;
-                    left: 10px;
-                    top:10px;
-                    background:white;
-                    color:grey;
-                    padding: 8px 13px 8px 13px;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-                .icon-save{
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                    background:red;
-                    border-radius: 5px;
-                    padding: 8px 15px 8px 15px;
-                    cursor: pointer;
-                    .position{
-                        padding-right: 10px;
-                    }
-                }
-                .text-ref{
-                    position: absolute;
-                    bottom: 20px;
-                    left: 15px;
-                    font-weight: bold;
-                    cursor: pointer;
-                }
-                .icon-etc{
-                    position: absolute;
-                    bottom: 8px;
-                    right:8px;
-                    background: rgba(0, 0, 0, 0.7);
-                    padding: 10px 20px 10px 20px;
-                    border-radius: 30px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    .position{
-                       margin-right: 5px;
-                       font-weight: bolder;
-                    }
-                }
             }
         }
-       
     }
     .content{
         font-size:$font-size-content;
@@ -114,10 +70,51 @@
                 .img-hover{
                     display: block;
                     position: relative;
-                    width:100%;
-                    height:$img-height;
                     border-radius: $boder-radius-card;
                     background-color:rgba(0, 0, 0, 0.1);
+                    .icon-upload{
+                        position: absolute;
+                        left: 10px;
+                        top:10px;
+                        background:white;
+                        color:grey;
+                        padding: 8px 13px 8px 13px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                    .icon-save{
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        background:red;
+                        border-radius: 5px;
+                        padding: 8px 15px 8px 15px;
+                        cursor: pointer;
+                        .position{
+                            padding-right: 10px;
+                        }
+                    }
+                    .text-ref{
+                        position: absolute;
+                        bottom: 20px;
+                        left: 15px;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                    .icon-etc{
+                        position: absolute;
+                        bottom: 8px;
+                        right:8px;
+                        background: rgba(0, 0, 0, 0.7);
+                        padding: 10px 20px 10px 20px;
+                        border-radius: 30px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        .position{
+                           margin-right: 5px;
+                           font-weight: bolder;
+                        }
+                    }
                 }
                 
             }
