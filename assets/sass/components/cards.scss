@@ -51,6 +51,7 @@
                     color:grey;
                     padding: 8px 13px 8px 13px;
                     border-radius: 5px;
+                    cursor: pointer;
                 }
                 .icon-save{
                     position: absolute;
@@ -59,6 +60,7 @@
                     background:red;
                     border-radius: 5px;
                     padding: 8px 15px 8px 15px;
+                    cursor: pointer;
                     .position{
                         padding-right: 10px;
                     }
@@ -68,15 +70,17 @@
                     bottom: 20px;
                     left: 15px;
                     font-weight: bold;
+                    cursor: pointer;
                 }
                 .icon-etc{
                     position: absolute;
                     bottom: 8px;
                     right:8px;
-                    background: rgba(0, 0, 0, 0.9);
+                    background: rgba(0, 0, 0, 0.7);
                     padding: 10px 20px 10px 20px;
                     border-radius: 30px;
                     font-weight: bold;
+                    cursor: pointer;
                     .position{
                        margin-right: 5px;
                        font-weight: bolder;
