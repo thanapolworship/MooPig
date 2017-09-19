@@ -1,0 +1,142 @@
+@mixin card(
+    //body
+    $width-card:320px,
+    $boder-radius-card:10px,
+    $body-color:white,
+    $body-color-hover:#EEEEEE,
+
+    //cardimg
+    $card-img-color:red,
+    $card-img-padding:10px,
+    
+    //img
+    $img-height:450px,
+  
+    //content-head
+    $font-size-content:20px,
+    $font-color-content:#666161,
+
+    //content-detail
+    $font-color-detail:#A8A1A1
+
+  ) {
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    width: $width-card;
+    border-radius: $boder-radius-card;
+    margin:auto;
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    .card-image{
+        padding: $card-img-padding;
+        border-radius: $boder-radius-card;
+        .sub-img{
+            width:100%;
+            height:$img-height;
+            background:green;
+            border-radius: $boder-radius-card;
+            color:white;
+            .img-hover{
+                width:100%;
+                height:$img-height;
+                display: none;
+                .icon-upload{
+                    position: absolute;
+                    left: 5px;
+                    top:5px;
+                }
+                .icon-save{
+                    position: absolute;
+                    top: 5px;
+                    right: 25px;
+                }
+                .text-ref{
+                    position: absolute;
+                    bottom: 5px;
+                    left: 5px;
+                }
+                .icon-etc{
+                    position: absolute;
+                    bottom: 5px;
+                    right:5px;
+                }
+            }
+        }
+       
+    }
+    .content{
+        font-size:$font-size-content;
+        color:$font-color-content;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        line-height: 1.2;
+    }
+    .content-position{
+        padding-left: 0.7rem;
+        padding-top: 2px;
+        font-size: $font-size-content;
+        color: $font-color-detail;
+        font-weight: bold;
+    }
+
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    &:hover{
+        background:$body-color-hover;
+        .card-image{
+            .sub-img{
+                .img-hover{
+                    display: block;
+                    position: relative;
+                    width:100%;
+                    height:$img-height;
+                    border-radius: $boder-radius-card;
+                    background-color:rgba(0, 0, 0, 0.1);
+                }
+                
+            }
+        }
+    }
+  
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  }
+
+  // Primary
+// ------------------------------------------------
+    // >>>>>>>>>>>>>>>>>>>>>>>
+.card-custom{
+    // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  
+    // MIXINS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+    @include card;
+    // STYLES OF COMPONENT ITSELF
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  
+    // STYLES OF CHILD CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  
+    // STYLES OF STATE
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  
+    // STYLES OF MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  
+    // STYLES OF STATE WITH MODIFIER CLASS
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  
+    // MEDIA QUERY
+    // >>>>>>>>>>>>>>>>>>>>>>>
+  }
+  
