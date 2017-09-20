@@ -1,19 +1,19 @@
 @mixin card(
     //body
-    $width-card:320px,
-    $boder-radius-card:10px,
-    $body-color:white,
+    $width-card: 320px,
+    $boder-radius-card: 10px,
+    $body-color:#FFFFFF,
     $body-color-hover:#EEEEEE,
 
     //cardimg
-    $card-img-color:red,
-    $card-img-padding:10px,
+    $card-img-color:#FF0000,
+    $card-img-padding: 10px,
     
     //img
-    $img-height:450px,
+    $img-height: 450px,
   
     //content-head
-    $font-size-content:20px,
+    $font-size-content: 20px,
     $font-color-content:#666161,
 
     //content-detail
@@ -27,28 +27,27 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     width: $width-card;
     border-radius: $boder-radius-card;
-    margin:auto;
+    margin: auto;
+    padding: $card-img-padding;
+    border-radius: $boder-radius-card;
+
     // STYLES OF CHILD CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
     .card-image{
-        padding: $card-img-padding;
+        width: 100%;
+        height: $img-height;
+        background:#008000;
         border-radius: $boder-radius-card;
-        .sub-img{
-            width:100%;
-            height:$img-height;
-            background:green;
-            border-radius: $boder-radius-card;
-            color:white;
-            .img-hover{
-                width:100%;
-                height:$img-height;
-                display: none;
-            }
-        }
+        color:#FFFFFF;
+    }
+    .card-image-active{
+        width: 100%;
+        height: $img-height;
+        display: none;
     }
     .content{
-        font-size:$font-size-content;
-        color:$font-color-content;
+        font-size: $font-size-content;
+        color: $font-color-content;
         padding-bottom: 0px;
         margin-bottom: 0px;
         line-height: 1.2;
@@ -60,70 +59,83 @@
         color: $font-color-detail;
         font-weight: bold;
     }
+    .icon-upload{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        background:#FFFFFF;
+        color:#808080;
+        padding: 8px 13px 8px 13px;
+        border-radius: 5px;
+    }
+    .icon-save{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background:#FF0000;
+        border-radius: 5px;
+        padding: 8px 15px 8px 15px;
+        .position{
+            padding-right: 10px;
+        }
+    }
+    .text-ref{
+        position: absolute;
+        bottom: 20px;
+        left: 15px;
+        font-weight: bold;
+        color: #DAD6D6;
+    }
+    .icon-etc{
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px 10px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        .position{
+           margin-right: 5px;
+           font-weight: bolder;
+        }
+    }
+    .button-icon{
+        position: absolute;
+        color: #B1ABAB;
+        display: none;
+    }
 
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
     &:hover{
         background:$body-color-hover;
-        .card-image{
-            .sub-img{
-                .img-hover{
-                    display: block;
-                    position: relative;
-                    border-radius: $boder-radius-card;
-                    background-color:rgba(0, 0, 0, 0.1);
-                    .icon-upload{
-                        position: absolute;
-                        left: 10px;
-                        top:10px;
-                        background:white;
-                        color:grey;
-                        padding: 8px 13px 8px 13px;
-                        border-radius: 5px;
-                        cursor: pointer;
-                    }
-                    .icon-save{
-                        position: absolute;
-                        top: 10px;
-                        right: 10px;
-                        background:red;
-                        border-radius: 5px;
-                        padding: 8px 15px 8px 15px;
-                        cursor: pointer;
-                        .position{
-                            padding-right: 10px;
-                        }
-                    }
-                    .text-ref{
-                        position: absolute;
-                        bottom: 20px;
-                        left: 15px;
-                        font-weight: bold;
-                        cursor: pointer;
-                    }
-                    .icon-etc{
-                        position: absolute;
-                        bottom: 8px;
-                        right:8px;
-                        background: rgba(0, 0, 0, 0.7);
-                        padding: 10px 20px 10px 20px;
-                        border-radius: 30px;
-                        font-weight: bold;
-                        cursor: pointer;
-                        .position{
-                           margin-right: 5px;
-                           font-weight: bolder;
-                        }
-                    }
-                }
-                
-            }
-        }
+        .card-image-active,.button-icon{
+            display: block;
+        }     
     }
   
     // STYLES OF MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
-  
+    .icon-upload{
+        left: 10px;
+        top:10px;
+    }
+    .icon-save{
+        top: 10px;
+        right: 10px;
+    }
+    .text-ref{
+        bottom: 20px;
+    }
+    .icon-etc{
+        bottom: 8px;
+        right:8px;
+    }
+    .button-icon{
+        bottom:84px;
+        right: 30px;
+    }
+    
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
   
