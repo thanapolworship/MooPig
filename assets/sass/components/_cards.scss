@@ -2,11 +2,11 @@
     //body
     $width-card: 320px,
     $boder-radius-card: 10px,
-    $body-color:#FFFFFF,
-    $body-color-hover:#EEEEEE,
+    $body-color: #FFFFFF,
+    $body-color-hover: #EEEEEE,
 
     //cardimg
-    $card-img-color:#FF0000,
+    $card-img-color: #FF0000,
     $card-img-padding: 10px,
     
     //img
@@ -14,10 +14,10 @@
   
     //content-head
     $font-size-content: 20px,
-    $font-color-content:#666161,
+    $font-color-content: #666161,
 
     //content-detail
-    $font-color-detail:#A8A1A1
+    $font-color-detail: #A8A1A1
 
   ) {
     // MIXINS
@@ -36,9 +36,9 @@
     .card-image{
         width: 100%;
         height: $img-height;
-        background:#008000;
+        background: #008000;
         border-radius: $boder-radius-card;
-        color:#FFFFFF;
+        color: #FFFFFF;
     }
     .card-image-active{
         width: 100%;
@@ -59,14 +59,14 @@
     }
     .icon-upload{
         position: absolute;
-        background:#FFFFFF;
-        color:#808080;
+        background: #FFFFFF;
+        color: #808080;
         padding: 8px 13px 8px 13px;
         border-radius: 5px;
     }
     .icon-save{
         position: absolute;
-        background:#FF0000;
+        background: #FF0000;
         border-radius: 5px;
         padding: 8px 15px 8px 15px;
         .position{
@@ -98,7 +98,7 @@
     // STYLES OF STATE
     // >>>>>>>>>>>>>>>>>>>>>>>
     &:hover{
-        background:$body-color-hover;
+        background: $body-color-hover;
         .card-image-active,.button-icon{
             display: block;
         }     
@@ -108,7 +108,7 @@
     // >>>>>>>>>>>>>>>>>>>>>>>
     .icon-upload{
         left: 10px;
-        top:10px;
+        top: 10px;
     }
     .icon-save{
         top: 10px;
@@ -120,16 +120,17 @@
     }
     .icon-etc{
         bottom: 8px;
-        right:8px;
+        right: 8px;
     }
     .button-icon{
-        bottom:84px;
+        bottom: 84px;
         right: 30px;
     }
     .content-position{
         padding-left: 11px;
         padding-top: 2px;
     }
+
     // STYLES OF STATE WITH MODIFIER CLASS
     // >>>>>>>>>>>>>>>>>>>>>>>
   
@@ -146,7 +147,7 @@
   
     // MIXINS
     // >>>>>>>>>>>>>>>>>>>>>>>
-    @include card;
+    @include card();
     // STYLES OF COMPONENT ITSELF
     // >>>>>>>>>>>>>>>>>>>>>>>
   
