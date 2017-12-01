@@ -1,0 +1,52 @@
+$color-red: red;
+$color-blue: blue;
+$color-yellow: yellow;
+
+.body{
+  height: 100%;
+}
+//help
+.bg{
+  &.is-red{
+    background: $color-red;
+  }
+  &.is-blue{
+    background: $color-blue;
+  }
+  &.is-yellow{
+    background: $color-yellow;
+  }
+}
+.field-form{
+  display: flex;
+  align-items: center;
+  span{
+    margin-right: 20px;
+  }
+}
+
+// 
+.search-bar{
+  // it self
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  div{
+    margin-right: 60px;
+  }
+  // complex class
+  .text-input{
+    width: 100%;
+    max-width: 300px;
+  }
+  .button-group{
+    button{
+      margin-right: 20px
+    }
+  }
+}
+.data-table{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
